@@ -1,16 +1,16 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-import mongoose, { HydratedDocument } from 'mongoose';
+import mongoose, { Document, HydratedDocument } from 'mongoose';
 
-export type UserDocument = HydratedDocument<User>;
+//export type UserDocument = HydratedDocument<User>;
 
 @Schema({
     timestamps:true
 })
 
-export class User {
+export class User extends Document{
 
-    _id: mongoose.Types.ObjectId;
-
+/*     _id: mongoose.Types.ObjectId;
+ */
     @Prop()
     name : string;
 

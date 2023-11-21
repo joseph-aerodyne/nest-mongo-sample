@@ -1,8 +1,6 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy, VerifyCallback } from 'passport-google-oauth2';
-import { config } from 'process';
 
 @Injectable()
 export class GoogleAuthGuard extends PassportStrategy(Strategy, 'google') {
